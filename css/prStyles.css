@@ -1,0 +1,886 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+    width: 100%;
+    /* top: -10px; */
+    height: 50px;
+    background-size: 48px 48px;
+    /* border-bottom: #000 1px solid; */
+}
+
+nav {
+    display: block;
+    /* justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1.25rem; */
+    /* background-color: thistle; */
+    height: 50px;
+}
+
+input#menu-hamburguesa~ul {
+    position: static;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    justify-content: flex-end;
+    transition: none;
+}
+
+nav ul li {
+    display: inline-block;
+    /*margin-left: 1rem;*/
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    /* border: #000 1px solid; */
+    margin-left: 10px;
+    /* overflow: hidden; */
+}
+
+nav ul li a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    /* padding: .5rem 1rem; */
+    border-bottom: none;
+    /* transition: border-translate .3s linear;s */
+    font-size: 14px;
+    /* text-align: center; */
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+    border-radius: 5px;
+    transition: all .3s;
+    line-height: 2.3;
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+nav ul li::before {
+    position: absolute;
+    content: "";
+    width: 0px;
+    height: 30px;
+    /* margin-top: -5px;
+    margin-left: -35px; */
+    border-bottom: none;
+    background: rgba(1, 1, 1, 1);
+    color: white;
+    clip-path: inset(0 100% 0 0);
+    transition: all .3s;
+    margin-left: -60px;
+    z-index: -1;
+    transition: all .3s;
+    border-radius: 5px;
+    font-weight: 100;
+}
+
+nav ul li:hover::before {
+    width: 120px;
+    height: 30px;
+    color: white;
+    border: none;
+    clip-path: inset(0 0 0 0);
+}
+
+nav input,
+img {
+    display: none;
+}
+
+nav label {
+    display: none;
+}
+
+
+/* fin nav */
+
+
+/* contenido section */
+
+section {
+    height: 580px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 40% 10% 10%;
+    grid-template-rows: 100%;
+    grid-gap: 1rem;
+    overflow: hidden;
+    /* border: 1px solid black;s */
+}
+
+.u {
+    display: block;
+    position: relative;
+    grid-column: 1 /3;
+    grid-row: 1;
+}
+
+section div:nth-child(1) {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/xyz.png) no-repeat, url(../img/Group84-1.svg) no-repeat, url(../img/Group85.svg) no-repeat;
+    background-size: 430px 500px, 15vh 15vh, 650px 460px;
+    background-position: 60px 80px, 100px 0px, -50px bottom;
+    /* border: 1px solid black; */
+}
+
+.d {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+section div:nth-child(2) {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    /* border: 1px solid black; */
+    margin-left: -55px;
+}
+
+.t {
+    grid-column: 2;
+    grid-row: 1;
+    /* border: 1px solid black; */
+}
+
+section div:nth-child(3) {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid black;s */
+}
+
+section h1 {
+    position: relative;
+    font-size: 2.3em;
+    color: #FF4F6F;
+    font-weight: 500;
+    top: 0px;
+    display: block;
+    width: 320px;
+    margin-top: 100px;
+    margin-left: -100px;
+}
+
+section h2 {
+    position: relative;
+    font-size: 4em;
+    font-weight: 600;
+    /* line-height: 1.2; */
+    /* display: block; */
+    width: 300px;
+    height: 140px;
+    top: -30px;
+    /* border: 1px solid black; */
+}
+
+section ul {
+    position: relative;
+    width: 300px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    top: -15px;
+}
+
+section ul li {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 100%;
+    top: -25px;
+    left: 0;
+    transition: ease-in-out .4s;
+}
+
+section ul li a {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 100%;
+    border: 2px groove #34B0BE;
+    transition: ease-in-out .4s;
+}
+
+section ul li:nth-child(1) {
+    background: url(../img/cib_linkedin-in.svg) no-repeat 12px 13px;
+}
+
+section ul li:nth-child(2) {
+    background: url(../img/ant-design_instagram-filled.svg) no-repeat 12px 13px;
+    left: 30px;
+}
+
+section ul li:nth-child(3) {
+    background: url(../img/ant-design_twitter-outlined.svg) no-repeat 12px 13px;
+    left: 60px;
+}
+
+section ul li:hover {
+    filter: hue-rotate(900deg) brightness(10%);
+    transform: rotate(360deg);
+}
+
+.redesSociales {
+    position: relative;
+    top: -30px;
+    width: 300px;
+    height: 50px;
+}
+
+#botonContacto {
+    top: 0px;
+    position: relative;
+    width: 40vh;
+    height: 9.2vh;
+    border-radius: 0px 50px 50px 0px;
+    border: none;
+    background: #FF4F6F;
+    overflow: hidden;
+}
+
+#botonContacto a {
+    display: block;
+    position: absolute;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    line-height: 2.9;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    border-radius: 0px 50px 50px 0px;
+    transition: all .3s;
+    text-shadow: 1px 1px 1px black;
+}
+
+#botonContacto a:hover {
+    background: #ADADAD;
+    color: #FF4F6F;
+    text-shadow: 1px 1px 1px white;
+}
+
+section button a i img {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    transition: ease-in-out .5s;
+}
+
+section button a i {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: white;
+    transition: all .3s;
+    background: url(../img/mail3.svg) no-repeat 20px;
+}
+
+section button a i:hover {
+    filter: hue-rotate(170deg) brightness(90%);
+    transition: ease-in-out .5;
+}
+
+
+/* fin coontenido section */
+
+
+/* contenido article fghdfg*/
+
+article {
+    height: 380px;
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: 11% 15% 15% 15% 15%;
+    grid-template-rows: 25% 20% 25% 25% 25%;
+    grid-gap: 3rem;
+    /* border: 1px solid black; */
+    overflow: hidden;
+}
+
+
+/* .o {
+        grid-column: 1;
+        grid-row: 1;
+        background: transparent;
+    } */
+
+.ti {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row: 1;
+}
+
+.c {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.ci {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.se {
+    grid-column: 4;
+    grid-row: 2;
+}
+
+.si {
+    grid-column: 5;
+    grid-row: 2;
+}
+
+h1 {
+    position: relative;
+    margin: 0px auto;
+    padding: 0;
+    font-size: 2rem;
+    color: #FF4F6F;
+    overflow: hidden;
+    font-weight: 500;
+    padding-left: 100px;
+    top: 0px;
+}
+
+article #controls {
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    display: inline-block;
+    list-style-type: none;
+    /* border: 2px groove #34B0BE; */
+    top: 737px;
+    margin-left: 350px;
+}
+
+article #controls ul {
+    position: relative;
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    /* border: 2px groove #34B0BE; */
+}
+
+article #controls ul li {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 100%;
+    /* background: #ADADAD; */
+    transition: ease-in-out .4s;
+}
+
+article #controls ul li a {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 100%;
+    /* border: 2px groove #34B0BE; */
+    transition: ease-in-out .3s;
+    /* background: #E5E5E5; */
+}
+
+article #controls ul li:nth-child(1) {
+    background: url(../img/arrow-left1.svg) no-repeat center #E5E5E5;
+    background-size: 30px 30px;
+}
+
+article #controls ul li:nth-child(1):hover {
+    background: url(../img/arrow-left1.svg) no-repeat center #FF4F6F;
+    background-size: 30px 30px;
+}
+
+article #controls ul li:nth-child(2) {
+    background: url(../img/arrow-right1.svg) no-repeat center #E5E5E5;
+    background-size: 30px 30px;
+    left: 20px;
+}
+
+article #controls ul li:nth-child(2):hover {
+    background: url(../img/arrow-right1.svg) no-repeat center #FF4F6F;
+    background-size: 30px 30px;
+}
+
+article #controls ul li:hover {
+    filter: invert(100%) hue-rotate(180deg) brightness(90%);
+}
+
+article h2 {
+    text-align: center;
+    color: black;
+    font-weight: 600;
+    font-style: normal;
+}
+
+article img {
+    position: relative;
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: ease-out .3s;
+}
+
+article span {
+    display: block;
+    font-size: 12px;
+    color: #ADADAD;
+    width: 180px;
+    height: auto;
+    text-align: center;
+    /* border: 1px solid black; */
+    margin-left: 10px;
+    font-style: normal;
+}
+
+article img:hover {
+    transform: scale(1.5);
+    transition: ease-out .3s;
+}
+
+
+/* fin contenido articles-servicios */
+
+
+/* contenido acerca */
+
+#acerca {
+    width: 100%;
+    height: 530px;
+    position: relative;
+    background: url(../img/Group84-1.svg) no-repeat;
+    background-position: right 100px;
+    /* border: #000 1px solid; */
+    top: 0px;
+    overflow: hidden;
+}
+
+#acerca p {
+    display: block;
+    width: 800px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    color: #ADADAD;
+}
+
+#acerca #logosAs2 {
+    display: flex;
+    position: relative;
+    width: 250px;
+    height: 150px;
+    top: 30px;
+    /* border: #000 1px solid; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#acerca #logosAs2 img {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    padding-left: 50px;
+    top: 0;
+}
+
+#acerca #logosAs2 div {
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: url(../img/image9.png) no-repeat center;
+    background-size: contain;
+}
+
+#acerca #logosAs2 div:nth-child(2) {
+    background: url(../img/logo_academlo.png) no-repeat center;
+    background-size: contain;
+    margin-left: 50px;
+}
+
+#acerca #logosAs2 span {
+    position: relative;
+    display: block;
+    font-size: 12px;
+    color: #ADADAD;
+    width: 100px;
+    height: auto;
+    /* border: 1px solid black; */
+    text-align: center;
+    top: 70px;
+}
+
+#acerca #logosAs2 h2 {
+    position: relative;
+    display: block;
+    font-size: 18px;
+    color: #ADADAD;
+    width: 100px;
+    height: auto;
+    font-weight: 500;
+    /* border: 1px solid black; */
+    text-align: center;
+    top: 85px;
+}
+
+
+/* fin contenido acerca */
+
+
+/*Sección mis Habilidades */
+
+#habilidades {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 400px;
+    margin-top: 100px;
+    /* border: #000 1px solid; */
+    overflow: hidden;
+}
+
+#habilidades h1 {
+    display: block;
+}
+
+#habilidades label {
+    position: relative;
+    padding-left: 100px;
+    font-size: 45px;
+    font-weight: 500;
+    margin-left: 100px;
+    line-height: 1.5;
+    color: #34B0BE;
+    top: -10px
+}
+
+#habilidades span {
+    position: relative;
+    margin-left: 100px;
+    font-size: 20px;
+    font-weight: 500;
+    top: -17px;
+}
+
+
+/* este es el progress bar general*/
+
+#habilidades progress {
+    left: 15px;
+    position: relative;
+    display: block;
+    width: 200px;
+    height: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #E5E5E5;
+    margin-left: 100px;
+}
+
+
+/* este es el progress bar para chromium, chrome etc*/
+
+#habilidades progress::-webkit-progress-bar {
+    position: relative;
+    display: block;
+    width: 200px;
+    height: 100%;
+    background: #E5E5E5;
+    border-radius: 10px;
+    background-image: none;
+}
+
+::-webkit-progress-value {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #34B0BE;
+}
+
+
+/* este es el progress bar firefox*/
+
+#habilidades progress::-moz-progress-bar {
+    position: relative;
+    display: block;
+    width: 200px;
+    height: 100%;
+    background-color: #34B0BE;
+    border-radius: 10px;
+    background-image: none;
+}
+
+
+/* fin sección mis habilidades */
+
+
+/* inicio de portafolio */
+
+#portafolio {
+    height: 390px;
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: 7% 16% 16% 16% 16%;
+    grid-template-rows: 25% 25% 25% 25% 25%;
+    grid-gap: 3rem;
+    /* border: #000 1px solid; */
+    overflow: hidden;
+}
+
+.tit {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.be {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.tr {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.ma {
+    grid-column: 4;
+    grid-row: 2;
+}
+
+.ho {
+    grid-column: 5;
+    grid-row: 2;
+}
+
+#portafolio h1 {
+    display: block;
+    position: relative;
+    margin-top: 0;
+}
+
+#portafolio div {
+    display: block;
+    position: relative;
+    width: 250px;
+    height: 240px;
+    /* margin-left: 15px; */
+    box-shadow: #ADADAD 2px 2px 5px, #ADADAD -2px -2px 5px;
+}
+
+#portafolio div:nth-child(2) {
+    background: url(../img/image9-1.png) no-repeat center top;
+    background-size: 100% 180px;
+}
+
+#portafolio div:nth-child(3) {
+    background: url(../img/image10.png) no-repeat center top;
+    background-size: 100% 180px;
+}
+
+#portafolio div:nth-child(4) {
+    background: url(../img/Rectangle58.png) no-repeat center top;
+    background-size: 100% 180px;
+}
+
+#portafolio div:nth-child(5) {
+    background: url(../img/image11.png) no-repeat center top;
+    background-size: 100% 180px;
+}
+
+#portafolio div span {
+    position: absolute;
+    bottom: 35px;
+    left: 10px;
+    /* color: #ADADAD; */
+}
+
+
+/* fin sección mis habilidades */
+
+
+/* inicio contacto */
+
+#contacto {
+    position: relative;
+    display: block;
+    /* align-items: center; */
+    width: 100%;
+    height: 950;
+    /* border: #000 1px solid; */
+    margin-top: 100px;
+}
+
+#contacto h2 {
+    text-align: center;
+    position: relative;
+    margin-top: 50px;
+}
+
+#miContacto {
+    display: block;
+    position: relative;
+    width: 450px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+    /* border: #000 1px solid; */
+}
+
+#miContacto img {
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    padding-left: 80px;
+    margin-top: 50px;
+}
+
+#contacto #formulario {
+    position: relative;
+    display: block;
+    width: 600px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #FF4F6F;
+    border-radius: 20px;
+    margin-top: 100px;
+}
+
+#contacto #formulario input {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 40px;
+    top: 30px;
+    margin-top: 15px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: inset 1px 1px 1px #ADADAD;
+    transition: ease-in 0.3s;
+    font-size: 18px;
+    padding-left: 10px;
+    color: rgb(112, 112, 112);
+}
+
+
+/* #contacto #formulario input::-webkit-input-placeholder{
+     color: rgb(112, 112, 112);
+ } */
+
+#contacto #formulario input::placeholder {
+    color: rgb(112, 112, 112);
+    left: 200px
+}
+
+#contacto #formulario input::placeholder:focus {
+    color: transparent;
+    left: 200px
+}
+
+#contacto #formulario input:focus {
+    outline: none;
+    box-shadow: #ADADAD 1px 4px 5px inset;
+    transition: ease-in 0.3s;
+    /* color:transparent; */
+}
+
+#contacto #formulario #btn-enviar {
+    display: block;
+    width: 300px;
+    color: white;
+    background: #34B0BE;
+    cursor: pointer;
+}
+
+#contacto #formulario #btn-enviar:hover {
+    display: block;
+    width: 300px;
+    color: #FF4F6F;
+    background: #ADADAD;
+}
+
+#contacto #formulario form label {
+    position: relative;
+    display: block;
+    color: white;
+    top: 45px;
+    padding-left: 23px;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+#contacto #formulario h2 {
+    display: block;
+    position: relative;
+    color: white;
+    /* text-align: center; */
+    font-size: 24px;
+    font-weight: 400;
+    left: 0;
+    top: 30px;
+    /* margin-left: -100px; */
+}
+
+
+/* fin de contacto */
+
+footer {
+    position: relative;
+    background: url(../img/logoPersonalgr.svg) no-repeat center #000;
+    background-size: 70px 70px;
+    width: 100%;
+    height: 100px;
+    top: 50px
+}
+
+footer p {
+    position: relative;
+    top: 86px;
+    color: #ADADAD;
+    font-size: 12px;
+    font-weight: 200;
+    text-align: center;
+}
